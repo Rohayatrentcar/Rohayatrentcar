@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Temukan semua halaman dan artikel dari Rohaya Rent Car. Daftar lengkap untuk kebutuhan sewa mobil Anda." />
+  <title>Linktree SEO Rohaya Rent Car</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background: #fdfdfd;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #2980b9;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .loading {
+      font-style: italic;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daftar Lengkap Artikel & Halaman Rohaya Rent Car</h1>
+  <p>Berikut adalah semua halaman dan posting dari situs <strong>www.rohayatrentcar.com</strong>. Halaman ini dapat digunakan untuk keperluan SEO, backlink, atau referensi pelanggan.</p>
+
+  <div id="status" class="loading">Mengambil data dari sitemap...</div>
+  <ul id="link-list"></ul>
+
+  <script>
+    const sitemaps = [
+      "https://www.rohayatrentcar.com/page-sitemap.xml",
+      "https://www.rohayatrentcar.com/post-sitemap.xml"
+    ];
+
+    const listElement = document.getElementById("link-list");
+    const status = document.getElementById("status");
+
+    function beautifyText(url) {
+      const clean = url
+        .replace("https://www.rohayatrentcar.com/", "")
+        .replace(/[-_/]/g, " ")
+        .replace(".html", "")
+        .replace(".php", "");
+      return clean.charAt(0).toUpperCase() + clean.slice(1);
+    }
+
+    Promise.all(
+      sitemaps.map(url =>
+        fetch(url)
+          .then(res => res.text())
+          .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
+      )
+    ).then(xmlDocs => {
+      xmlDocs.forEach(xml => {
+        const urls = xml.querySelectorAll("url > loc");
+        urls.forEach(loc => {
+          const li = document.createElement("li");
+          const a = document.createElement("a");
+          a.href = loc.textContent;
+          a.target = "_blank";
+          a.textContent = beautifyText(loc.textContent);
+          li.appendChild(a);
+          listElement.appendChild(li);
+        });
+      });
+      status.style.display = "none";
+    }).catch(err => {
+      status.textContent = "Gagal mengambil sitemap.";
+      console.error(err);
+    });
+  </script>
+</body>
+</html>
