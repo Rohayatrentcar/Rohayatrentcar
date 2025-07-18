@@ -45,6 +45,6 @@ Kami melayani berbagai kebutuhan transportasi Anda di wilayah:
 
 ## ℹ️ Tentang Repositori Ini
 
-Repositori ini dibuat sebagai bagian dari dokumentasi digital dan pengembangan teknologi internal **Rohaya Rent Car**, termasuk sistem pemesanan, pelacakan armada, dan manajemen layanan.
+Repositori ini dibuat sebagai bagian dari dokumentasi digital dan pengembangan teknologi internal **Rohayat Rent Car**, termasuk sistem pemesanan, pelacakan armada, dan manajemen layanan.
 
 > 🚀 Dengan dukungan teknologi dan kepercayaan pelanggan, kami hadir untuk memenuhi kebutuhan transportasi Anda di Jakarta dan sekitarnya.
