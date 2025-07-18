@@ -1,6 +1,6 @@
 # 🚗 Rental Mobil Jakarta | Murah, Terpercaya & Lengkap
 
-Selamat datang di GitHub resmi **Rohaya Rent Car**, penyedia jasa **rental mobil Jakarta** dengan layanan lengkap dan harga bersahabat.
+Selamat datang di GitHub resmi **Rohayat Rent Car**, penyedia jasa **rental mobil Jakarta** dengan layanan lengkap dan harga bersahabat.
 
 Kami melayani berbagai kebutuhan transportasi Anda di wilayah:
 - ✅ Jakarta Pusat
